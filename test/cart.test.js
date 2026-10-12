@@ -12,3 +12,44 @@ test('the example from the slides', () => {
   const options = { vatRate: 0.08, freeShipFrom: 500000, shipFee: 30000 }
   assert.equal(cartTotal(items, options), 467400)
 })
+
+test('negative price throws RangeError', () => {
+  const items = [{ price: -100, qty: 2 }]
+
+  const options = {
+    vatRate: 0.08,
+    freeShipFrom: 500000,
+    shipFee: 30000
+  }
+
+  assert.throws(() => {
+    cartTotal(items, options)
+  }, RangeError)
+})
+test('zero quantity throws RangeError', () => {
+  const items = [{ price: 100000, qty: 0 }]
+
+  const options = {
+    vatRate: 0.08,
+    freeShipFrom: 500000,
+    shipFee: 30000
+  }
+
+  assert.throws(() => {
+    cartTotal(items, options)
+  }, RangeError)
+})
+
+test('fractional quantity throws RangeError', () => {
+  const items = [{ price: 100000, qty: 1.5 }]
+
+  const options = {
+    vatRate: 0.08,
+    freeShipFrom: 500000,
+    shipFee: 30000
+  }
+
+  assert.throws(() => {
+    cartTotal(items, options)
+  }, RangeError)
+})
