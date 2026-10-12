@@ -82,3 +82,13 @@ test('free shipping above threshold', () => {
   const items = [{ price: 300000, qty: 2 }]
   assert.equal(cartTotal(items, options), 648000)
 })
+
+test('negative quantity throws RangeError', () => {
+  assert.throws(() => cartTotal([{ price: 100000, qty: -1 }], options), RangeError)
+})
+
+test('fractional total rounds to the nearest whole dong', () => {
+  const roundingOptions = { vatRate: 0.08, freeShipFrom: 0, shipFee: 30000 }
+  assert.equal(cartTotal([{ price: 101, qty: 1 }], roundingOptions), 109)
+  assert.equal(cartTotal([{ price: 107, qty: 1 }], roundingOptions), 116)
+})

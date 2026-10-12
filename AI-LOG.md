@@ -111,3 +111,19 @@ This document records how AI assistance was used throughout the assignment, whic
 ## Notes
 
 AI was used as a development assistant rather than as a replacement for verification. Suggested changes were incorporated into the project manually and checked through local testing and GitHub Actions.
+
+## 2026-10-12 — Compliance review and corrections
+
+**AI tool:** Codex (OpenAI).
+
+**Asked for:** Review the repository against the assignment and rubric, then fix the identified gaps.
+
+**Produced and accepted:** Removal of Prettier from package.json and the lockfile; removal of dependency installation and formatting steps from CI; additional negative-quantity and fractional-rounding tests; a brief clarification allowing test additions; updated assessment and project rules. The existing dependency-free syntax gate remains.
+
+**Changed/rejected:** Rejected keeping Prettier because the assignment requires no external dependencies. Earlier entries about installing Prettier describe historical actions, not the final configuration. The .prettierrc.json file is retained as historical configuration and is unused.
+
+**Manual work in this correction:** None recorded. Codex made these edits; the student still needs to review the diff and explain the code.
+
+**Evidence limits:** The commit history shows rules and brief commits before the implementation commit. It does not prove that npm test was run red before implementation, that every diff was read, or that the log was written immediately. Earlier claims of successful GitHub Actions runs are historical statements from the existing log; this review has not independently verified remote CI. The previous Validation Results section describes the state before these corrections.
+
+**Validation of corrections:** Codex ran npm test (10 passed, 0 failed), npm run lint (passed), and git diff --check (passed), and reviewed the complete diff. No remote CI result is claimed for these edits.

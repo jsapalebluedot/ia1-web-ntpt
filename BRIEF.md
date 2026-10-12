@@ -5,7 +5,7 @@ Implement the `cartTotal(items, options)` function for a JavaScript shopping car
 
 ## 2. Scope
 - Allowed file: `src/cart.js`
-- Do not modify `test/cart.test.js`.
+- Preserve existing tests in `test/cart.test.js`; add specification-based edge-case tests when needed.
 - Do not modify `package.json`.
 - Do not create or modify unrelated files.
 - Do not install external dependencies.
@@ -79,5 +79,5 @@ The implementation is complete when:
 - A zero, negative, or fractional quantity throws `RangeError`.
 - The final total is rounded to the nearest whole VND.
 - No external dependencies are added.
-- Only `src/cart.js` is modified during implementation.
+- Implementation changes stay in `src/cart.js`; test additions stay in `test/cart.test.js`.
 - All existing tests pass using `npm test`.

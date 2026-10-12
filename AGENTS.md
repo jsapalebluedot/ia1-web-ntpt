@@ -34,3 +34,8 @@
 - Never remove existing tests to hide failures.
 - Never change unrelated files.
 - Never claim tests pass without running them.
+
+## Automated gate
+- Run `npm run lint` for dependency-free JavaScript syntax checks.
+- Run `npm test` for behavior checks.
+- CI runs both commands on push and pull requests.
