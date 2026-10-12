@@ -53,3 +53,32 @@ test('fractional quantity throws RangeError', () => {
     cartTotal(items, options)
   }, RangeError)
 })
+
+const options = {
+  vatRate: 0.08,
+  freeShipFrom: 500000,
+  shipFee: 30000
+}
+
+// 1. Empty cart
+test('empty cart returns zero', () => {
+  assert.equal(cartTotal([], options), 0)
+})
+
+// 2. Below free shipping threshold
+test('shipping fee applies below threshold', () => {
+  const items = [{ price: 400000, qty: 1 }]
+  assert.equal(cartTotal(items, options), 462000)
+})
+
+// 3. Exactly at free shipping threshold
+test('free shipping at exact threshold', () => {
+  const items = [{ price: 250000, qty: 2 }]
+  assert.equal(cartTotal(items, options), 540000)
+})
+
+// 4. Above free shipping threshold
+test('free shipping above threshold', () => {
+  const items = [{ price: 300000, qty: 2 }]
+  assert.equal(cartTotal(items, options), 648000)
+})
