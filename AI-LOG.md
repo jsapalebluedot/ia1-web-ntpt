@@ -102,9 +102,11 @@ This document records how AI assistance was used throughout the assignment, whic
 
 ## Validation Results
 
-- Local automated testing: **8 passed, 0 failed**.
-- GitHub Actions workflow: **successful** on the `main` branch.
-- Changes are traceable through the repository's commit history.
+- **Functional tests:** All 8 automated tests passed with no failures.
+- **Syntax verification:** `npm run lint` completed successfully.
+- **Formatting verification:** `npm run format:check` passed using Prettier.
+- **Continuous integration:** The GitHub Actions workflow completed successfully on the `main` branch after the formatting checks were added.
+- **Version control:** Implementation, testing, configuration, and documentation changes are recorded in the Git commit history.
 
 ## Notes
 
