@@ -86,6 +86,20 @@ This document records how AI assistance was used throughout the assignment, whic
 
 **Manual work:** Reviewed the entries, maintained `AI-LOG.md`, and committed and pushed the documentation.
 
+## 7. Introducing Code Formatting Checks
+
+**AI tool:** ChatGPT (OpenAI)
+
+**Request:** Asked for guidance on adding a consistent formatting standard to the project and integrating an automated formatting check into the existing CI pipeline.
+
+**Accepted:** The suggestion to use Prettier, configure formatting rules in `.prettierrc.json`, and introduce the `format:check` script in `package.json`.
+
+**Modified:** Extended the existing `.github/workflows/ci.yml` workflow by adding dependency installation with `npm ci` and a formatting check before running the test suite, while keeping the previous syntax-check and testing steps.
+
+**Discarded:** None.
+
+**Manual work:** Installed Prettier as a development dependency, updated the project configuration, executed `npm run format:check`, `npm run lint`, and `npm test` locally, and confirmed that all checks passed. Reviewed the formatting changes, committed them to Git, pushed the updates, and verified that the latest GitHub Actions workflow completed successfully.
+
 ## Validation Results
 
 - Local automated testing: **8 passed, 0 failed**.
