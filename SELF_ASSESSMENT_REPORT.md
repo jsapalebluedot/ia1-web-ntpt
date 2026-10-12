@@ -38,13 +38,14 @@ The latest GitHub Actions run completed successfully.
 
 ## Overall Assessment
 
-| Category | Estimated Score |
-|---|---:|
-| Behaviour | 30/30 |
-| Tests | 18/20 |
-| Development Harness | 19/20 |
-| Task Brief | 14/15 |
-| AI Usage Log | 14/15 |
-| **Total** | **95/100** |
+| Criterion | Maximum Score | Self-Assessed Score | Evidence |
+|---|---:|---:|---|
+| Behaviour | 30 | 30 | `src/cart.js` implements the required calculations, validation, and rounding. |
+| Tests | 20 | 18 | `test/cart.test.js` contains eight passing tests covering valid and invalid inputs. |
+| Development Harness | 20 | 19 | `AGENTS.md`, npm checks, Prettier, and successful GitHub Actions CI. |
+| Task Brief | 15 | 14 | `BRIEF.md` documents the scope, contract, calculations, and acceptance criteria. |
+| AI Usage Log | 15 | 14 | `AI-LOG.md` records AI assistance, modifications, and manual work. |
+| **Total** | **100** | **95** | |
+
 
 These scores are estimates based on the implemented features and available verification results, not official grading results.
