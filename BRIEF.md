@@ -32,7 +32,7 @@ Each item contains:
 2. Calculate VAT as `subtotal * vatRate`.
 3. If `subtotal >= freeShipFrom`, shipping is 0. Otherwise, shipping is `shipFee`.
 4. Calculate the total as `subtotal + VAT + shipping`.
-5. Round the final result to the nearest whole VND.
+5. Use Math.round() on the final total and do not use toFixed(0) to return a string.
 6. Return the result as a JavaScript number.
 
 For an empty cart, return `0` without VAT or shipping.
