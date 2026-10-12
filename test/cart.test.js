@@ -19,7 +19,7 @@ test('negative price throws RangeError', () => {
   const options = {
     vatRate: 0.08,
     freeShipFrom: 500000,
-    shipFee: 30000
+    shipFee: 30000,
   }
 
   assert.throws(() => {
@@ -32,7 +32,7 @@ test('zero quantity throws RangeError', () => {
   const options = {
     vatRate: 0.08,
     freeShipFrom: 500000,
-    shipFee: 30000
+    shipFee: 30000,
   }
 
   assert.throws(() => {
@@ -46,7 +46,7 @@ test('fractional quantity throws RangeError', () => {
   const options = {
     vatRate: 0.08,
     freeShipFrom: 500000,
-    shipFee: 30000
+    shipFee: 30000,
   }
 
   assert.throws(() => {
@@ -57,7 +57,7 @@ test('fractional quantity throws RangeError', () => {
 const options = {
   vatRate: 0.08,
   freeShipFrom: 500000,
-  shipFee: 30000
+  shipFee: 30000,
 }
 
 // 1. Empty cart
